@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>אודות - קרול לייזרוביץ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+      <section class="bg-white p-8 rounded-xl shadow">
+        <h1 class="text-3xl font-bold text-[#1e3a5f] mb-4">אודותיי</h1>
+        <p class="text-slate-700">מומחה לניהול איכות עם ניסיון בליווי חברות בישראל ובינלאומית. משלב ראייה מערכתית והבנה רגולטורית עמוקה.</p>
+      </section>
+
+      <section class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold">שירותים מקצועיים</h3>
+          <ul class="text-slate-700 mt-2 list-disc list-inside">
+            <li>הטמעת תקני איכות</li>
+            <li>הכנה לאודיטים</li>
+            <li>שיפור תהליכים</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold">התמחויות</h3>
+          <ul class="text-slate-700 mt-2 list-disc list-inside">
+            <li>מכשור רפואי</li>
+            <li>אלקטרוניקה ומכניקה</li>
+            <li>רגולציה בינלאומית</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold">שפות</h3>
+          <ul class="text-slate-700 mt-2 list-disc list-inside">
+            <li>עברית</li>
+            <li>רומנית</li>
+            <li>אנגלית</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('./_nav-footer.html').then(r => r.text()).then(html => {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        const nav = tmp.querySelector('nav');
+        const footer = tmp.querySelector('footer');
+        if (nav) document.getElementById('nav-placeholder').appendChild(nav);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+        document.querySelector('main').style.paddingTop = '1rem';
+      });
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.replace());</script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>צור קשר - קרול לייזרוביץ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-3xl mx-auto px-4 py-12">
+      <section class="bg-white p-8 rounded-xl shadow">
+        <h1 class="text-2xl font-bold text-[#1e3a5f] mb-4">צור קשר</h1>
+        <p class="text-slate-700 mb-4">מלאו את הטופס מטה ואשלח לכם חזרה בהקדם.</p>
+
+        <!-- Web3Forms form (no backend required). Replace ACCESS_KEY with your real key. -->
+        <form id="web3form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="DUMMY_KEY_123" />
+          <input type="hidden" name="subject" value="פנייה חדשה מהאתר" />
+
+          <label class="block mb-2">שם מלא *</label>
+          <input class="w-full p-3 rounded-md border mb-4" type="text" name="name" required />
+
+          <label class="block mb-2">אימייל *</label>
+          <input class="w-full p-3 rounded-md border mb-4" type="email" name="email" required />
+
+          <label class="block mb-2">טלפון</label>
+          <input class="w-full p-3 rounded-md border mb-4" type="tel" name="phone" />
+
+          <label class="block mb-2">חברה</label>
+          <input class="w-full p-3 rounded-md border mb-4" type="text" name="company" />
+
+          <label class="block mb-2">תקן מעניין אותך</label>
+          <select name="standard" class="w-full p-3 rounded-md border mb-4">
+            <option value="">בחר תקן</option>
+            <option value="AS9100">AS9100</option>
+            <option value="ISO9001">ISO 9001</option>
+            <option value="ISO13485">ISO 13485</option>
+            <option value="other">אחר</option>
+          </select>
+
+          <label class="block mb-2">הודעה *</label>
+          <textarea name="message" class="w-full p-3 rounded-md border mb-4" rows="6" required></textarea>
+
+          <div class="flex gap-3">
+            <button type="submit" class="bg-[#1e3a5f] text-white px-6 py-3 rounded-md">שלח</button>
+            <button type="button" id="mailtoBtn" class="bg-gray-200 px-6 py-3 rounded-md">פתח במייל</button>
+          </div>
+        </form>
+
+        <div id="success" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded">תודה! הפנייה נשלחה.</div>
+        <div id="error" class="hidden mt-4 p-4 bg-red-50 border border-red-200 rounded">שגיאה בשליחת הפנייה. נסה שוב מאוחר יותר.</div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch('./_nav-footer.html').then(r => r.text()).then(html => {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        const nav = tmp.querySelector('nav');
+        const footer = tmp.querySelector('footer');
+        if (nav) document.getElementById('nav-placeholder').appendChild(nav);
+        if (footer) document.getElementById('footer-placeholder').appendChild(footer);
+        document.querySelector('main').style.paddingTop = '1rem';
+      });
+
+      // Web3Forms response handling (progressive enhancement)
+      const form = document.getElementById('web3form');
+      const success = document.getElementById('success');
+      const error = document.getElementById('error');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        success.classList.add('hidden');
+        error.classList.add('hidden');
+
+        const data = new FormData(form);
+        const plain = Object.fromEntries(data.entries());
+
+        try {
+          const res = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          const json = await res.json();
+          if (res.ok && json.success) {
+            success.classList.remove('hidden');
+            form.reset();
+          } else {
+            error.classList.remove('hidden');
+          }
+        } catch (err) {
+          error.classList.remove('hidden');
+        }
+      });
+
+      // Mailto fallback button
+      document.getElementById('mailtoBtn').addEventListener('click', () => {
+        const fd = new FormData(form);
+        const name = fd.get('name') || '';
+        const email = fd.get('email') || '';
+        const phone = fd.get('phone') || '';
+        const company = fd.get('company') || '';
+        const standard = fd.get('standard') || '';
+        const message = fd.get('message') || '';
+
+        const subject = encodeURIComponent('פנייה חדשה מהאתר - ' + name);
+        const body = encodeURIComponent('שם: ' + name + '\nאימייל: ' + email + '\nטלפון: ' + phone + '\nחברה: ' + company + '\nתקן: ' + standard + '\n\n' + message);
+        window.location.href = 'mailto:carol.leiz@gmail.com?subject=' + subject + '&body=' + body;
+      });
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.replace());</script>
+  </body>
+</html>
