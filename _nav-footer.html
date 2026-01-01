@@ -1,17 +1,27 @@
 <!-- Shared navigation and footer for static pages -->
-<nav class="bg-white shadow-sm sticky top-0 z-50">
+<nav class="bg-white shadow-sm fixed top-0 w-full z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="./index.html" class="flex items-center gap-3">
       <div class="w-10 h-10 bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] rounded-lg flex items-center justify-center text-white">
         <i data-lucide="award" class="w-6 h-6"></i>
       </div>
-      <div class="text-lg font-bold text-[#1e3a5f]">קרול לייזרוביץ</div>
+      <div>
+      <h3 class="font-bold">קרול לייזרוביץ - יועץ איכות CQE</h3>
+      <p class="text-sm text-slate-800">AS9100 | ISO 9001 | ISO 13485</p>
+      </div>
     </a>
-    <div class="space-x-4 text-slate-700 hidden sm:block">
-      <a href="./index.html" class="hover:text-[#1e3a5f]">בית</a>
-      <a href="./about.html" class="hover:text-[#1e3a5f]">אודות</a>
-      <a href="./services.html" class="hover:text-[#1e3a5f]">שירותים</a>
-      <a href="./contact.html" class="hover:text-[#1e3a5f]">צור קשר</a>
+    <div class="hidden sm:flex items-center gap-2 text-slate-700">
+      <a href="./index.html" class="px-4 py-2 rounded-lg hover:bg-slate-100 hover:text-[#1e3a5f] transition-colors">בית</a>
+      <a href="./about.html" class="px-4 py-2 rounded-lg hover:bg-slate-100 hover:text-[#1e3a5f] transition-colors">אודות</a>
+      <a href="./services.html" class="px-4 py-2 rounded-lg hover:bg-slate-100 hover:text-[#1e3a5f] transition-colors">שירותים</a>
+      <a href="./contact.html" class="px-4 py-2 rounded-lg hover:bg-slate-100 hover:text-[#1e3a5f] transition-colors">צור קשר</a>
+      
+      <div class="h-6 w-px bg-slate-200 mx-2"></div>
+
+      <a href="tel:0501234567" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-100 hover:text-[#1e3a5f] transition-colors font-semibold">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span dir="ltr">050-1234567</span>
+      </a>
     </div>
   </div>
   </nav>
@@ -20,14 +30,14 @@
   <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
     <div>
       <h3 class="font-bold">קרול לייזרוביץ - יועץ איכות CQE</h3>
-      <p class="text-sm mt-2 text-slate-200">AS9100 | ISO 9001 | ISO 13485</p>
+      <p class="text-sm mt-2 text-slate-200">מומחה בתקני איכות בינלאומיים עם ניסיון רב בתעשיות התעופה, הרפואה והתעשייה הכללית.</p>
     </div>
     <div>
       <h4 class="text-[#d4af37] font-semibold mb-2">תקנים</h4>
       <ul class="text-sm text-slate-200 space-y-1">
-        <li>AS9100</li>
-        <li>ISO 9001</li>
-        <li>ISO 13485</li>
+        <li>AS9100 - תעשיית התעופה והחלל</li>
+        <li>ISO 9001 - ניהול איכות</li>
+        <li>ISO 13485 - מכשור רפואי</li>
       </ul>
     </div>
     <div>
