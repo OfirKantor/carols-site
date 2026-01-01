@@ -165,14 +165,12 @@
          <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
-      // 2. Define a function to refresh icons
       function refreshIcons() {
         if (window.lucide) {
           lucide.createIcons();
         }
       }
 
-      // 3. Handle Navbar/Footer Loading
       fetch('./_nav-footer.html')
         .then(r => {
             if (!r.ok) throw new Error("Network response was not ok");
@@ -189,16 +187,25 @@
           
           document.querySelector('main').style.paddingTop = '80px';
           
-          // CRITICAL: Re-run icon generation after inserting the navbar
+          // *** NEW CODE STARTS HERE ***
+          // Mobile Menu Toggle Logic
+          const btn = document.getElementById('mobile-menu-btn');
+          const menu = document.getElementById('mobile-menu');
+
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              menu.classList.toggle('hidden');
+            });
+          }
+          // *** NEW CODE ENDS HERE ***
+
           refreshIcons();
         })
         .catch(err => {
             console.error("Failed to load navbar/footer:", err);
-            // Even if nav fails, we still want icons for the main content
             refreshIcons();
         });
 
-      // 4. Initial Icon Load (for the main content)
       document.addEventListener('DOMContentLoaded', refreshIcons);
     </script>
   </body>
