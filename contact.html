@@ -56,11 +56,15 @@
                     <label for="phone" class="block text-sm font-medium text-[#1e3a5f] mb-2 text-right">
                       טלפון <span class="text-red-500">*</span>
                     </label>
-                    <input type="tel" name="מספר טלפון" id="phone" placeholder="0501234567" required
-                          maxlength="10"
+                    <input type="tel" 
+                          name="מספר טלפון" 
+                          id="phone" 
+                          placeholder="0501234567" 
+                          required
+                          inputmode="numeric"
                           pattern="[0-9]{10}"
-                          title="נא להזין 10 ספרות בדיוק (ללא מקפים)"
-                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                          title="נא להזין 10 ספרות בדיוק"
+                          oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)"
                           class="w-full border border-slate-300 rounded-lg p-3 text-base text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2563eb]/30 focus:border-[#2563eb] transition duration-200">
                   </div>
 
