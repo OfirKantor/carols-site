@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>תודה - קרול לייזרוביץ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    
+    <div id="nav-placeholder"></div>
+
+    <main class="flex-grow flex items-center justify-center px-4 py-20">
+      <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center border border-slate-100">
+        
+        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+        </div>
+
+        <h1 class="text-3xl font-bold text-[#1e3a5f] mb-4">ההודעה נשלחה בהצלחה!</h1>
+        
+        <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+          תודה על פנייתך.
+          <br>
+          פרטיך נשלחו ואחזור אליך בהקדם האפשרי.
+        </p>
+
+        <a href="./index.html" 
+           class="inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1e3a5f] text-white text-lg font-semibold py-3 px-8 rounded-xl transition-colors shadow-lg shadow-blue-500/30">
+          <span>חזרה לדף הבית</span>
+          <i data-lucide="arrow-left" class="w-5 h-5"></i>
+        </a>
+
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      function refreshIcons() { if (window.lucide) lucide.createIcons(); }
+
+      fetch('./_nav-footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const tmp = document.createElement('div');
+          tmp.innerHTML = html;
+          document.getElementById('nav-placeholder').appendChild(tmp.querySelector('nav'));
+          document.getElementById('footer-placeholder').appendChild(tmp.querySelector('footer'));
+          
+          // Mobile menu logic
+          setTimeout(() => {
+             const btn = document.getElementById('mobile-menu-btn');
+             const menu = document.getElementById('mobile-menu');
+             if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+          }, 100);
+
+          refreshIcons();
+        });
+      
+      document.addEventListener('DOMContentLoaded', refreshIcons);
+    </script>
+  </body>
+</html>
