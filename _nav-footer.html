@@ -25,9 +25,14 @@
       </a>
     </div>
 
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
-      <i data-lucide="menu" class="w-6 h-6"></i>
-    </button>
+<button 
+  id="mobile-menu-btn" 
+  class="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+  aria-label="פתח תפריט ניווט"
+  aria-expanded="false"
+>
+  <i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i>
+</button>
 
   </div>
 
@@ -48,19 +53,19 @@
   </div>
 </nav>
 
-<footer class="bg-[#1e3a5f] text-white mt-auto">
-  <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right">
+<footer class="bg-[#1e3a5f] text-white mt-auto" role="contentinfo">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-right">
     
     <div class="flex flex-col items-center md:items-start">
       <h3 class="font-bold text-lg mb-3">קרול לייזרוביץ - יועץ איכות</h3>
-      <p class="text-sm text-slate-300 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
+      <p class="text-sm text-slate-200 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
         מומחה בתקני איכות בינלאומיים עם ניסיון רב בתעשיות התעופה, הרפואה והתעשייה הכללית.
       </p>
     </div>
 
     <div>
-      <h4 class="text-[#d4af37] font-bold text-lg mb-4">תקנים</h4>
-      <ul class="text-slate-300 space-y-2 text-sm">
+      <h4 class="text-[#f6cf6a] font-bold text-lg mb-4">תקנים</h4>
+      <ul class="text-slate-200 space-y-2 text-sm">
         <li>AS9100 - תעשיית התעופה והחלל</li>
         <li>ISO 9001 - ניהול איכות</li>
         <li>ISO 13485 - מכשור רפואי</li>
@@ -68,24 +73,29 @@
     </div>
 
     <div class="flex flex-col items-center md:items-start">
-      <h4 class="text-[#d4af37] font-bold text-lg mb-4">צור קשר</h4>
+      <h4 class="text-[#f6cf6a] font-bold text-lg mb-4">צור קשר</h4>
       
-      <div class="space-y-3 text-slate-300">
-        <a href="tel:0545634083" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors">
+      <div class="space-y-3 text-slate-200">
+        <a href="tel:0545634083" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors focus:ring-2 focus:ring-[#f6cf6a] outline-none rounded" aria-label="התקשרו לטלפון 054-5634083">
           <span dir="ltr" class="text-lg">054-5634083</span>
-          <i data-lucide="phone" class="w-4 h-4"></i>
+          <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
         </a>
         
-        <a href="mailto:carol.leiz@gmail.com" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors">
+        <a href="mailto:carol.leiz@gmail.com" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors focus:ring-2 focus:ring-[#f6cf6a] outline-none rounded" aria-label="שלחו מייל לכתובת carol.leiz@gmail.com">
           <span>carol.leiz@gmail.com</span>
-          <i data-lucide="mail" class="w-4 h-4"></i>
+          <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
         </a>
       </div>
     </div>
 
+    <div>
+      <h4 class="text-[#f6cf6a] font-bold text-lg mb-4">נגישות</h4>
+      <a href="accessibility.html" class="text-slate-200 hover:text-white hover:underline focus:ring-2 focus:ring-[#f6cf6a] outline-none rounded transition-colors">הצהרת נגישות</a>
+    </div>
+
   </div>
 
-  <div class="border-t border-white/10 py-6 text-center text-sm text-slate-400">
-    © 2025 קרול לייזרוביץ - כל הזכויות שמורות
+  <div class="border-t border-white/10 py-6 text-center text-sm text-slate-300">
+    © 2026 קרול לייזרוביץ - כל הזכויות שמורות
   </div>
 </footer>

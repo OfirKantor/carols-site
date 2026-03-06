@@ -3,43 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>קרול לייזרוביץ – יועץ איכות</title>
+    <title>קרול לייזרוביץ – יועץ איכות ISO</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-slate-50 text-slate-900">
-    <div id="nav-placeholder"></div>
+    
+    <header id="nav-placeholder" role="banner"></header>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="relative bg-gradient-to-bl from-[#1e3a5f] via-[#2563eb] to-[#1e3a5f] text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'><g fill=\'%23fff\' fill-opacity=\'0.05\'><path d=\'M36 18c0-9.94-8.06-18-18-18 0 9.94 8.06 18 18 18z\'/></g></svg>')"></div>
+    <main id="main-content">
+      <section class="relative bg-gradient-to-bl from-[#1e3a5f] via-[#2563eb] to-[#1e3a5f] text-white overflow-hidden" aria-labelledby="hero-title">
+        <div class="absolute inset-0 opacity-30" aria-hidden="true" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'><g fill=\'%23fff\' fill-opacity=\'0.05\'><path d=\'M36 18c0-9.94-8.06-18-18-18 0 9.94 8.06 18 18 18z\'/></g></svg>')"></div>
         
         <div class="absolute top-10 left-0 z-10 p-4">
-          <img src="profile.jpeg" alt="Profile Photo" 
+          <img src="profile.jpeg" alt="קרול לייזרוביץ - יועץ איכות מוסמך" 
           class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#2563eb] shadow-sm">
         </div>
 
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 px-4 md:ml-44 text-right" dir="rtl"">
-          <i data-lucide="award" class="w-4 h-4 text-[#d4af37]"></i>
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 px-4 md:ml-44 text-right" dir="rtl">
+          <i data-lucide="award" class="w-4 h-4 text-[#d4af37]" aria-hidden="true"></i>
           <span class="text-lg font-medium">קרול לייזרוביץ - יועץ איכות CQE</span>
         </div>
 
         <div class="mx-auto px-4 py-20 relative max-w-7xl sm:px-6 lg:px-8 md:py-32">
           <div class="max-w-8xl">         
-          
-            <h1 class="mb-6 ml-1 text-4xl font-bold leading-tight md:text-6xl">קרול לייזרוביץ – יועץ לניהול איכות ותקני ISO</h1>
+            <h1 id="hero-title" class="mb-6 ml-1 text-4xl font-bold leading-tight md:text-6xl">קרול לייזרוביץ – יועץ לניהול איכות ותקני ISO</h1>
 
-            <h2 class="mb-6 ml-1 text-2xl font-bold leading-tight md:text-4xl">ליווי ארגונים בהקמה, הטמעה ושיפור מערכות איכות</h2>
+            <p class="mb-6 ml-1 text-2xl font-bold leading-tight md:text-4xl">ליווי ארגונים בהקמה, הטמעה ושיפור מערכות איכות</p>
 
-            <h2 class="mb-6 ml-1 text-2xl font-bold leading-tight md:text-4xl">AS9100 | ISO 13485 | ISO 9001</h2>
+            <p class="mb-6 ml-1 text-2xl font-bold leading-tight md:text-4xl">AS9100 | ISO 13485 | ISO 9001</p>
 
             <div class="text-slate-200 mb-12 px-6 text-xl leading-relaxed md:text-2xl space-y-4">
               <p class="font-semibold">מעל 25 שנות ניסיון בליווי ארגונים, ניהול והטמעת מערכות איכות</p>
               <ul class="list-disc list-inside space-y-1">
                 <li>סוקר בכיר לתקן איכות ISO 9001 - מכון התקנים הישראלי </li>
-                <li>סוקר בכיר  ISO 13485 – בתעשייה </li>
+                <li>סוקר בכיר ISO 13485 – בתעשייה </li>
                 <li>סוקר בכיר לתקן AS9100 - בתעשייה </li>
-                <li>מהנדס איכות מוסמך -  CQE </li>
+                <li>מהנדס איכות מוסמך - CQE </li>
               </ul>
               <p class="font-semibold">ניסיון מוכח בניהול איכות:</p>
               <ul class="list-disc list-inside space-y-1">
@@ -51,136 +50,127 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="./contact.html" class="bg-[#d4af37] hover:bg-[#b89530] text-[#1e3a5f] font-semibold px-8 h-14 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center justify-center">לקביעת פגישת יעוץ</a>
+              <a href="./contact.html" class="bg-[#d4af37] hover:bg-[#b89530] focus:ring-4 focus:ring-yellow-300 text-[#1e3a5f] font-semibold px-8 h-14 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center justify-center outline-none">לקביעת פגישת יעוץ</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Expertise & Standards -->
-      <section class="bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] text-white py-20">
+      <section class="bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] text-white py-20" aria-labelledby="expertise-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-slate-200 mb-12 px-6 text-xl leading-relaxed md:text-2xl space-y-4"">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">תחומי מומחיות</h2>
+          <div class="text-slate-200 mb-12 px-6 text-xl leading-relaxed md:text-2xl space-y-4">
+            <h2 id="expertise-title" class="text-4xl md:text-5xl font-bold mb-6">תחומי מומחיות</h2>
             <p class="text-xl text-slate-200 leading-relaxed mb-4 font-semibold">מומחיות במתודולוגיות ניהול איכות, בקרה סטטיסטית של תהליכים, הסמכות ותמיכה טכנית, תמיכה בלקוח, הובלה וניהול טכני</p>
             <p class="text-xl text-slate-200 leading-relaxed mb-4 font-semibold">נסיון בתחומים:</p>
             <ul class="list-disc list-inside space-y-1">      
-            <li>מכשור רפואי (FDA, EU MDR)</li>
-            <li>אלקטרוניקה ומכניקה</li>
-            <li>תעשיות המוליכים למחצה</li>
-            <li>תעשיות ייצור אלקטרוני והשמות אלקטרוניות</li>
-            <li>תעשיה ביטחונית ותעופתית</li>
-            <li>תעשיות מתכת</li>
-            <li>תעשיות הדפוס</li>
-            <li>עבודה מול גופי רגולציה ולקוחות בינלאומיים</li>
+              <li>מכשור רפואי (FDA, EU MDR)</li>
+              <li>אלקטרוניקה ומכניקה</li>
+              <li>תעשיות המוליכים למחצה</li>
+              <li>תעשיות ייצור אלקטרוני והשמות אלקטרוניות</li>
+              <li>תעשיה ביטחונית ותעופתית</li>
+              <li>תעשיות מתכת</li>
+              <li>תעשיות הדפוס</li>
+              <li>עבודה מול גופי רגולציה ולקוחות בינלאומיים</li>
             </ul>
             <p class="text-xl text-slate-200 leading-relaxed mb-4 font-semibold">בחברות מובילות: Align Technology, דגש פ.ק, Risco Group, Intersystem Israel Ltd</p>
             <p class="text-xl text-slate-200 leading-relaxed mb-4 font-semibold">15 שנות שירות בחיל האוויר (IAF) בתחום אחזקת דרג ביניים למסוקי יסעור (CH-53) וינשוף (UH-60) כולל הקמה והטמעה של תקני TQM ו-ISO</p>
-
           </div>
         </div>
       </section>
 
-      <!-- Standards cards -->
-      <section class="py-20 bg-slate-50">
+      <section class="py-20 bg-slate-50" aria-labelledby="standards-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">סוגי התקנים</h2>
+            <h2 id="standards-title" class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">סוגי התקנים</h2>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">ליווי מקצועי ומקיף בהשגת הסמכות איכות מובילות בעולם</p>
           </div>
 
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl">
+            <article class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-white">
-                <i data-lucide="plane" class="w-12 h-12 mb-4 text-white"></i>
+                <i data-lucide="plane" class="w-12 h-12 mb-4 text-white" aria-hidden="true"></i>
                 <h3 class="text-2xl font-bold mb-1">AS9100</h3>
                 <p class="text-white/90 text-sm">תעופה וחלל</p>
               </div>
               <div class="p-6">
-                <p class="text-slate-600 leading-relaxed">תקן לניהול איכות לתעשיית התעופה, החלל והביטחון.
-מבוסס על ISO 9001 אך מוסיף דרישות מחמירות בנושאי ניהול סיכונים, עקיבות מלאה, ניהול ספקים ואמינות מערכות, על מנת להבטיח בטיחות ואמינות מירבית</p>
+                <p class="text-slate-600 leading-relaxed">תקן לניהול איכות לתעשיית התעופה, החלל והביטחון. מבוסס על ISO 9001 אך מוסיף דרישות מחמירות בנושאי ניהול סיכונים, עקיבות מלאה, ניהול ספקים ואמינות מערכות.</p>
               </div>
-            </div>
+            </article>
 
-            <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl">
+            <article class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
               <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 p-6 text-white">
-                <i data-lucide="award" class="w-12 h-12 mb-4 text-white"></i>
+                <i data-lucide="award" class="w-12 h-12 mb-4 text-white" aria-hidden="true"></i>
                 <h3 class="text-2xl font-bold mb-1">ISO 9001</h3>
                 <p class="text-white/90 text-sm">ניהול איכות</p>
               </div>
               <div class="p-6">
-                <p class="text-slate-600 leading-relaxed">התקן המוביל בעולם לניהול איכות המתאים לכלל סוגי הארגונים.
-התקן מגדיר שיטה לניהול תהליכים באופן עקבי, שיפור מתמיד, מדידת ביצועים והצבת הלקוח במרכז
-מטרת התקן לוודא שהמוצרים / השירותים עומדים בדרישות ובציפיות</p>
+                <p class="text-slate-600 leading-relaxed">התקן המוביל בעולם לניהול איכות המתאים לכלל סוגי הארגונים. התקן מגדיר שיטה לניהול תהליכים באופן עקבי, שיפור מתמיד, מדידת ביצועים והצבת הלקוח במרכז.</p>
               </div>
-            </div>
+            </article>
 
-            <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl">
+            <article class="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-shadow">
               <div class="bg-gradient-to-br from-rose-500 to-rose-600 p-6 text-white">
-                <i data-lucide="heart" class="w-12 h-12 mb-4 text-white"></i>
+                <i data-lucide="heart" class="w-12 h-12 mb-4 text-white" aria-hidden="true"></i>
                 <h3 class="text-2xl font-bold mb-1">ISO 13485</h3>
                 <p class="text-white/90 text-sm">מכשור רפואי</p>
               </div>
               <div class="p-6">
-                <p class="text-slate-600 leading-relaxed">תקן איכות ייעודי לחברות המייצרות ומשווקות מכשור רפואי ואביזרים רפואיים.
-התקן כולל דרישות מחמירות יותר בנושאי תיעוד, ניהול סיכונים, בקרת תצורה ונעקבות אחר מוצרים לאורך מחזור חייהם.
-נדרש לקבלת אישורי שיווק רגולטורים, לדוגמה CE, FDA ,MDR</p>
+                <p class="text-slate-600 leading-relaxed">תקן איכות ייעודי לחברות המייצרות ומשווקות מכשור רפואי. כולל דרישות מחמירות בנושאי תיעוד, ניהול סיכונים, בקרת תצורה ונעקבות אחר מוצרים.</p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Services -->
-      <section class="py-20 bg-white">
+      <section class="py-20 bg-white" aria-labelledby="services-title">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">השירותים שלי</h2>
+            <h2 id="services-title" class="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">השירותים שלי</h2>
             <p class="text-slate-600 mx-auto text-xl max-w-2xl">פתרונות מקיפים להטמעה ושיפור מערכות ניהול איכות</p>
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl">
-              <i data-lucide="shield" class="w-12 h-12 mb-4 text-blue"></i>
+              <i data-lucide="shield" class="w-12 h-12 mb-4 text-blue" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">הטמעת תקני איכות</h3>
               <p class="text-slate-600">ליווי מקצועי בבניה והטמעה של מערכת ניהול איכות עפ״י התקנים הרלוונטיים</p>
             </div>
             <div class="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl">
-              <i data-lucide="trending-up" class="w-12 h-12 mb-4 text-blue"></i>
+              <i data-lucide="trending-up" class="w-12 h-12 mb-4 text-blue" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">שיפור תהליכים</h3>
               <p class="text-slate-600">זיהוי והטמעה של שיפורים במערכת האיכות והתהליכים הארגוניים</p>
             </div>
             <div class="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl">
-              <i data-lucide="check-circle" class="w-12 h-12 mb-4 text-blue"></i>
+              <i data-lucide="check-circle" class="w-12 h-12 mb-4 text-blue" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">הכנה למבדקים</h3>
               <p class="text-slate-600">הכנה מקיפה למבדק הסמכה או מעקב, כולל מבדקים פנימיים</p>
             </div>
             <div class="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl">
-              <i data-lucide="users" class="w-12 h-12 mb-4 text-blue"></i>
+              <i data-lucide="users" class="w-12 h-12 mb-4 text-blue" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-[#1e3a5f] mb-3">הדרכות והשתלמויות</h3>
               <p class="text-slate-600">הדרכות מותאמות אישית לצוותים בנושאי איכות ותקנים</p>
             </div>
           </div>
           <div class="flex justify-center w-full py-10">
-  <a href="./services.html" class="inline-flex items-center gap-3 bg-[#1e3a5f] hover:bg-[#162c46] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-    <span>לכל השירותים</span>
-    <i data-lucide="chevron-left" class="w-5 h-5"></i>
-  </a>
-</div>
+            <a href="./services.html" class="inline-flex items-center gap-3 bg-[#1e3a5f] hover:bg-[#162c46] focus:ring-4 focus:ring-blue-300 text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 outline-none">
+              <span>לכל השירותים</span>
+              <i data-lucide="chevron-left" class="w-5 h-5" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] text-white">
+      <section class="py-20 bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] text-white" aria-labelledby="cta-title">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <i data-lucide="briefcase" class="w-16 h-16 mx-auto mb-6 text-[#d4af37]"></i>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">בואו נעבוד ביחד</h2>
+          <i data-lucide="briefcase" class="w-16 h-16 mx-auto mb-6 text-[#d4af37]" aria-hidden="true"></i>
+          <h2 id="cta-title" class="text-3xl md:text-4xl font-bold mb-6">בואו נעבוד ביחד</h2>
           <p class="text-xl text-slate-200 mb-8 max-w-2xl mx-auto">אשמח לשמוע על האתגרים שלכם ולעזור לכם להשיג את מטרות האיכות</p>
-          <a href="./contact.html" class="bg-[#d4af37] hover:bg-[#b89530] text-[#1e3a5f] font-semibold px-10 h-14 text-lg rounded-xl shadow-xl inline-flex items-center justify-center">צור קשר</a>
+          <a href="./contact.html" class="bg-[#d4af37] hover:bg-[#b89530] focus:ring-4 focus:ring-yellow-300 text-[#1e3a5f] font-semibold px-10 h-14 text-lg rounded-xl shadow-xl inline-flex items-center justify-center outline-none">צור קשר</a>
         </div>
       </section>
-      <div id="footer-placeholder"></div>
     </main>
+
+    <footer id="footer-placeholder" role="contentinfo"></footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -202,22 +192,28 @@
           const nav = tmp.querySelector('nav');
           const footer = tmp.querySelector('footer');
           
-          if (nav) document.getElementById('nav-placeholder').appendChild(nav);
+          if (nav) {
+            // הנגשה: הוספת תפקיד ניווט
+            nav.setAttribute('role', 'navigation');
+            document.getElementById('nav-placeholder').appendChild(nav);
+          }
           if (footer) document.getElementById('footer-placeholder').appendChild(footer);
           
           document.querySelector('main').style.paddingTop = '80px';
           
-          // *** NEW CODE STARTS HERE ***
-          // Mobile Menu Toggle Logic
           const btn = document.getElementById('mobile-menu-btn');
           const menu = document.getElementById('mobile-menu');
 
           if (btn && menu) {
+            // הנגשה: הוספת מאפייני ARIA לכפתור תפריט
+            btn.setAttribute('aria-expanded', 'false');
+            btn.setAttribute('aria-label', 'פתח תפריט ניווט');
+            
             btn.addEventListener('click', () => {
-              menu.classList.toggle('hidden');
+              const expanded = menu.classList.toggle('hidden');
+              btn.setAttribute('aria-expanded', !expanded);
             });
           }
-          // *** NEW CODE ENDS HERE ***
 
           refreshIcons();
         })
